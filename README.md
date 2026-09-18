@@ -1,7 +1,7 @@
 # Fakestore
 
 ## Sobre o projeto
-Criei uma loja virtual consumindo a API pública "FakeStore API". O intuito foi consumir a API e manipular com JavaScript, criação dinâmica de elementos no DOM e continuidade dos meus estudos em desenvolvimento front-end.
+Criei uma loja virtual consumindo a API pública "FakeStore API". O intuito foi consumir a API e manipular com JavaScript, criação dinâmica de elementos no DOM e continuar os estudos no desenvolvimento web.
 
 ## Tecnologias utilizadas
 * **HTML5:** Estruturação base da página e formulário
@@ -13,4 +13,4 @@ Criei uma loja virtual consumindo a API pública "FakeStore API". O intuito foi 
 * Consumo de uma API REST pública com `fetch`
 * Criação e inserção dinâmica de elementos no DOM via JavaScript
 * Exibição de dados reais: nome, imagem, categoria, descrição, avaliação e preço
-* Fluxo para subir o código ao github: git e github (add, commit, push e utilização do github CLI)
+* Fluxo para subir o código ao github: git e github (add, commit, push)
