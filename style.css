@@ -2,141 +2,170 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-    background-color: #f4f6f8;
-    color: #333;
-    padding: 20px;
+    font-family: 'Inter', sans-serif;
+    background-color: #f0f2f5;
+    color: #1a1a2e;
+    min-height: 100vh;
 }
 
-/* container */
-.alocacao {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-    gap: 24px;
+.header {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    padding: 32px 24px;
+    text-align: center;
+    border-bottom: 3px solid #e94560;
+}
+
+.header-inner {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px 0;
 }
 
-/* Card do produto */
+.logo {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: -0.5px;
+}
+
+.header-sub {
+    margin-top: 6px;
+    font-size: 0.95rem;
+    color: #a0aec0;
+    font-weight: 400;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.alocacao {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    gap: 28px;
+}
+
 .card {
     background-color: #ffffff;
-    border-radius: 12px;
-    padding: 16px;
+    border-radius: 16px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    border: 1px solid #e8ecf0;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
 }
 
-/* Categoria do produto (Etiqueta superior) */
-.card .category {
-    font-size: 0.75rem;
+.card span:first-child {
+    font-size: 0.7rem;
     font-weight: 700;
-    color: #0056b3;
+    color: #e94560;
     text-transform: uppercase;
-    letter-spacing: 0.8px;
-    background-color: #e3edf7;
-    padding: 4px 8px;
-    border-radius: 4px;
+    letter-spacing: 1px;
+    background-color: #fff0f3;
+    padding: 4px 10px;
+    border-radius: 20px;
     align-self: flex-start;
-    margin-bottom: 8px;
+    margin-bottom: 12px;
+    display: inline-block;
 }
 
-/* Imagem do produto */
 .card img {
     width: 100%;
     height: 200px;
     object-fit: contain;
-    margin-bottom: 12px;
-    border-radius: 8px;
+    margin-bottom: 16px;
+    padding: 8px;
+    background-color: #f8f9fb;
+    border-radius: 10px;
 }
 
-/* Título do produto */
 .card h2 {
-    font-size: 1.05rem;
+    font-size: 0.95rem;
     font-weight: 600;
-    color: #1a1a1a;
-    margin-bottom: 6px;
+    color: #1a1a2e;
+    margin-bottom: 8px;
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
+    line-height: 1.45;
 }
 
-/* Avaliação do produto */
-.card .rating {
-    font-size: 0.85rem;
-    font-weight: 600;
-    color: #d97706;
-    margin-bottom: 8px;
+.avaliacao {
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: #b7791f;
+    background-color: #fffbeb;
+    padding: 4px 10px;
+    border-radius: 20px;
+    align-self: flex-start;
+    margin-bottom: 10px;
+    display: inline-block;
 }
 
-/* Descrição do produto */
 .card p {
-    font-size: 0.875rem;
-    color: #666;
-    margin-bottom: 12px;
+    font-size: 0.85rem;
+    color: #718096;
+    margin-bottom: 16px;
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
-    line-height: 1.4;
+    line-height: 1.55;
 }
 
-/* Preço do produto */
-.card .price {
-    font-size: 1.3rem;
+.card .price,
+.card span:last-of-type {
+    font-size: 1.4rem;
     font-weight: 700;
-    color: #00a650;
+    color: #1a1a2e;
     margin-bottom: 16px;
     display: block;
 }
 
-/* Area dos Botões */
 .buttons {
     display: flex;
     flex-direction: column;
     gap: 8px;
 }
 
-/* Estilização dos botões (links <a>) */
 .buttons a {
     text-align: center;
-    padding: 10px 14px;
-    border-radius: 6px;
-    font-size: 0.9rem;
+    padding: 11px 14px;
+    border-radius: 8px;
+    font-size: 0.875rem;
     font-weight: 600;
     text-decoration: none;
     cursor: pointer;
-    transition: background-color 0.2s ease;
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-/* Botão: Adicionar ao Carrinho */
 .buttons a:nth-child(1) {
-    background-color: #e3edf7;
-    color: #0056b3;
+    background-color: #f0f2f5;
+    color: #1a1a2e;
+    border: 1px solid #e2e8f0;
 }
 
 .buttons a:nth-child(1):hover {
-    background-color: #d0e1f4;
+    background-color: #e2e8f0;
 }
 
-/* Botão: Comprar */
 .buttons a:nth-child(2) {
-    background-color: #0056b3;
+    background-color: #e94560;
     color: #ffffff;
 }
 
 .buttons a:nth-child(2):hover {
-    background-color: #003d82;
+    background-color: #c73652;
 }
