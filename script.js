@@ -1,3 +1,4 @@
+import getProdutos from "./getProdutos.js"
 const cards = document.querySelector('.alocacao')
 
 // estrutura de um card para referência visual
@@ -59,16 +60,12 @@ const exibirProdutos = (item) => {
     return divCards
 }
 
-const mostrarProdutos = () => {
-    const endPoint = 'https://fakestoreapi.com/products'
-    
-    fetch(endPoint)
-    .then(resposta => resposta.json())
-    .then(produtosDaApi => {
-        for(let produto of produtosDaApi){
-            cards.append(exibirProdutos(produto))
-        }
-    })
+const mostrarProdutos = async () => {
+    const produtosDaApi = await getProdutos()
+
+    for(let produto of produtosDaApi){
+        cards.append(exibirProdutos(produto))
+    }
 }
 
 mostrarProdutos()
